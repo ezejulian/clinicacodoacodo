@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Codo a Codo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Médicos</h1>
+        <button id="verMedicos">Ver Médicos</button>
+        <button id="agregarMedico">Agregar Médico</button>
+        <div>
+            <label for="buscarespecialidad">Buscar por Especialidad:</label>
+            <select id="buscarespecialidad"></select>
+            <button id="buscarPorespecialidad">Buscar</button>
+        </div>
+        <div>
+            <label for="buscarProvincia">Buscar por Provincia:</label>
+            <select id="buscarProvincia"></select>
+            <button id="buscarPorProvincia">Buscar</button>
+        </div>
+        <div id="formularioMedico" class="formulario">
+            <h2 id="formularioTitulo">Agregar Médico</h2>
+            <form id="formMedico">
+                <input type="hidden" id="medicoId">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required>
+                <label for="especialidad_id">Especialidad:</label>
+                <select id="especialidad_id" name="especialidad_id" required></select>
+                <label for="provincia_id">Provincia:</label>
+                <select id="provincia_id" name="provincia_id" required></select>
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                <button type="submit" id="formSubmitButton">Agregar</button>
+            </form>
+        </div>
+        <div id="listaMedicos" class="lista">
+            <h2>Lista de Médicos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>Ciudad</th>
+                        <th>DNI</th>
+                        <th>Especialidad</th>
+                        <th>Provincia</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="medicosTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
